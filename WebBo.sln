@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBo", "WebBo\WebBo.csproj", "{0C9600B3-80CF-4306-87EF-8303BA1D3DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBo.Bussiness", "WebBo.Bussiness\WebBo.Bussiness.csproj", "{F617CA3A-7518-4F6D-B6FF-3E31A2FC2653}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C9600B3-80CF-4306-87EF-8303BA1D3DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C9600B3-80CF-4306-87EF-8303BA1D3DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C9600B3-80CF-4306-87EF-8303BA1D3DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C9600B3-80CF-4306-87EF-8303BA1D3DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F617CA3A-7518-4F6D-B6FF-3E31A2FC2653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F617CA3A-7518-4F6D-B6FF-3E31A2FC2653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F617CA3A-7518-4F6D-B6FF-3E31A2FC2653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F617CA3A-7518-4F6D-B6FF-3E31A2FC2653}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF2D8BA7-92D1-438F-97BC-29A982C6C262}
+	EndGlobalSection
+EndGlobal
