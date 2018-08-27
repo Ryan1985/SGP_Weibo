@@ -19,18 +19,8 @@ namespace WebBo.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-            var result = ApiAdapter.Instance.Post("http://api.ekai03.cn/api/create.asp", new ApiParamModel
-            {
-                ApiKey= "961b1d975f0e6c1b9b3463867cd1cb37",
-                Link = "https://weibo.com/1932379431/G0GbZexxB",
-                Num = 100,
-                Author = false,
-                Type = 12,
-                Comment="aaa",
-                ContentType = 2
-            });
-
-            ViewData["Message"] = ViewData["Message"] + result.msg;
+           
+            ViewData["Message"] = ViewData["Message"];
             return View();
         }
 

@@ -1,0 +1,27 @@
+﻿@model LoginModel
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="~/favicon.ico">
+    <title>欢迎登录</title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/theme/sbadmin2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/css/signin.css" rel="stylesheet">
+</head>
+<body class="text-center">
+    <form class="form-signin" asp-controller="Login" asp-action="Login" method="post">
+        <h1 class="h3 mb-3 font-weight-normal">欢迎登陆</h1>
+        <input type="text" id="inputUserName" asp-for="UserName" class="form-control" placeholder="用户名" required autofocus>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input type="password" id="inputPassword" asp-for="Password" class="form-control" placeholder="密码" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </form>
+</body>
+</html>
