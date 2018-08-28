@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebBo.Bussiness\WebBo.Bussiness.csproj" />
+    <ProjectReference Include="..\WebBo.Common\WebBo.Common.csproj" />
   </ItemGroup>
 
 </Project>

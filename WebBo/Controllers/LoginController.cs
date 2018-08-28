@@ -29,7 +29,7 @@ namespace WebBo.Controllers
                 if (user != null)
                 {
                     //记录Session
-                    HttpContext.Session.Set(user.UserId.ToString(), Encoding.Default.GetBytes(JsonConvert.SerializeObject(user)));
+                    HttpContext.Session.Set("CurrentUser", Encoding.Default.GetBytes(JsonConvert.SerializeObject(user)));
                     //跳转到系统首页
                     return RedirectToAction("Index", "Home");
                 }
@@ -37,6 +37,18 @@ namespace WebBo.Controllers
                 return View();
             }
             return View(model);
+        }
+
+
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            if (HttpContext.Session.Keys.Contains("CurrentUser"))
+            {
+                HttpContext.Session.Remove("CurrentUser");
+            }
+            return RedirectToAction("Login", "Login");
         }
 
 

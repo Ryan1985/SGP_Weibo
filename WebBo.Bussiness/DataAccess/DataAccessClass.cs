@@ -22,7 +22,7 @@ namespace WebBo.Bussiness.DataAccess
             var resultList = new List<MySqlParameter>();
             foreach (DictionaryEntry de in htParams)
             {
-                resultList.Add(new MySqlParameter(de.Key.ToString(), de.Value));
+                resultList.Add(new MySqlParameter(de.Key.ToString().StartsWith("?") ? de.Key.ToString() : ("?" + de.Key.ToString()), de.Value));
             }
             return resultList.ToArray();
         }
@@ -62,9 +62,16 @@ namespace WebBo.Bussiness.DataAccess
             {
                 using (MySqlCommand cmd = new MySqlCommand(sql, con))
                 {
-                    cmd.Parameters.AddRange(param);
-                    con.Open();
-                    n = cmd.ExecuteNonQuery();
+                    try
+                    {
+                        cmd.Parameters.AddRange(param);
+                        con.Open();
+                        n = cmd.ExecuteNonQuery();
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
                 }
             }
             return n;

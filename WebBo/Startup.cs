@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebBo.Common;
 
 namespace WebBo
 {
@@ -16,6 +17,9 @@ namespace WebBo
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            Configurations.Instance.DbConnectionString = Configuration["DbConnectionString"];
+
         }
 
         public IConfiguration Configuration { get; }
